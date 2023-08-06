@@ -9,7 +9,7 @@ spec:
         nodeSelectorTerms:
         - matchExpressions:
           - key: kubernetes.io/os
-            opeerator: In
+            operator: In
             values:
             - linux
       preferredDuringSchedulingIgnoredDuringExecution:
