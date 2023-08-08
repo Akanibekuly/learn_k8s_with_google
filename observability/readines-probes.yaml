@@ -10,10 +10,15 @@ spec:
     image: simple-webapp
     ports: 
     - containerPort: 8080
+  
   readinessProbe: # http test 
     httpGet:
       path: /api/ready
       port: 8080
+    initialDelaySeconds: 10 # start probe after 10 seconds 
+    periodSeconds: 5 # and delay for 5 sec
+    failureThreshold: 8 # default tries 3 attempts 
+    
   readinessProbe: # TCP test 
     tcpSocket:
       port: 3306
