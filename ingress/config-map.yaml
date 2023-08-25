@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configuration
+data:
+  err-log-path:  
+  keep-alive: 
+  ssl-protocols:  # set all necessary configs
